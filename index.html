@@ -8,21 +8,24 @@ Don't forget to star the repo
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Saavn Music Player</title>
-    <meta name="description" content="Saavn Music Player is an Ad-Free Music Player, High Quality MP3 Songs with Metadata support, and a Modern Design. A large library of songs. developed by wiz64">
+    <title>闲の音乐</title>
+    <meta name="description" content="闲の音乐是一款无广告音乐播放器，具有元数据支持的高品质MP3歌曲，以及现代设计。一个大型的歌曲库。由wiz64开发,闲_态度修改">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="padding-bottom: 50px;background: rgb(0,0,0);">
+<!-- <body style="background-image: url(r:\1.jpg); background-size: cover; background-position: center; padding-bottom: 50px;"> -->
+    <div class="button-container">
+        <div class="button-column"></div>
+      </div>
     <header class="header-dark" style="color: rgb(205,205,205);padding: 0px 0px 10px;">
         <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-            <div class="container"><a class="navbar-brand" href="#">Saavn</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="#">闲_态度</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="btn btn-primary" role="button" href="https://github.com/wiz64/saavn-web-ui" target="_blank">Github</a></li>
+                        <li class="nav-item"><a class="btn btn-primary" role="button" href="https://relaxation.eu.org/homepage/" target="_blank">闲の主页</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,8 +33,8 @@ Don't forget to star the repo
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <h1 class="text-center" style="margin: 0px;">Saavn</h1>
-                    <h3 class="text-center" style="color: rgba(249,255,255,0.81);font-family: Bitter, serif;">Music Player &amp; Downloader</h3>
+                    <h1 class="text-center" style="margin: 0px; font-family:等线, sans-serif; font-size: 30px; color: #ffffff;">闲の音乐</h1>
+                    <h4 class="text-center" style="color: rgba(249,255,255);font-family: Bitter, serif;">無料音楽再生とダウンロード</h3>
                     <p class="text-center" style="padding: 0px 5px;">Ad-Free, Metadata, &amp; Modern Design</p>
                 </div>
             </div>
@@ -41,7 +44,7 @@ Don't forget to star the repo
     <div>
         <div class="tab-content">
             <div class="tab-pane active" role="tabpanel" id="tab-1">
-                <section class="highlight-clean" style="background: #000; color: rgb(249,249,249);padding-top: 20px;">
+                <!-- <section class="highlight-clean" style="background: #000; color: rgb(249,249,249);padding-top: 20px;"> -->
                     <div class="text-center">
                         <select id="saavn-bitrate">
                             <option value="4">320kbps</option>
@@ -53,8 +56,8 @@ Don't forget to star the repo
                     <div class="container" style="padding: 0px;">
                         <div class="intro">
                             <form class="text-center" action="#" method="get">
-                                <div style="width: 95%;margin: auto;padding: 3px;" placeholder="Enter Song, Artist or Album name"><input class="form-control float-left fit-content" type="text" id="saavn-search-box" style="margin: 0px;color: var(--gray-dark);max-width: 100%;width: 75%;" placeholder="Enter Name, Year, Artist"><button class="btn btn-primary" id="saavn-search-trigger" type="submit" style="text-align: center;" onclick="SaavnSearch()">Search</button></div>
-                                <h5 class="text-uppercase text-center" style="color: rgb(165,255,184);">Results</h5>
+                                <div style="width: 95%;margin: auto;padding: 3px;" placeholder="Enter Song, Artist or Album name"><input class="form-control float-left fit-content" type="text" id="saavn-search-box" style="margin: 0px;color: var(--gray-dark);max-width: 100%;width: 75%;" placeholder="Enter Name, Year, Artist"><button class="btn btn-primary" id="saavn-search-trigger" type="submit" style="text-align: center;" onclick="SaavnSearch()">搜索</button></div>
+                                <h5 class="text-uppercase text-center" style="color: rgb(165,255,184);">搜索结果</h5>
                             </form>
                         </div>
                             <div id="saavn-results" style="margin-bottom: 20px;">
@@ -64,23 +67,13 @@ Don't forget to star the repo
                             <div class="button-container">
                             </div>
                             <script>
-                                const buttonTitles = ['2023','English Songs','Edward Maya','Zack Knight','Akcent','Arijit Singh','Pitbull','Imran Khan', 'DJ Snake', 'Darshan Raval', 'Jubin Nautiyal', 'Armaan Malik', 'Old Songs',"Adele","Billie Eilish","Imagine Dragons","Ed Sheeran","Neha Kakkar", "Badshah", "Atif Aslam", "Guru Randhawa", "Shreya Ghoshal", "Tony Kakkar", "Harrdy Sandhu", "Armaan Malik", "Diljit Dosanjh", "Sonu Nigam", "Vishal Dadlani", "Kanika Kapoor", "Sukhwinder Singh", "Sunidhi Chauhan", "Mika Singh", "Shaan", "Mohit Chauhan", "Pritam", "KK", "Yo Yo Honey Singh","Taylor Swift","Sia","Radioactive","Halsey","The Chainsmokers","Drake","Justin Bieber","Beyonce","The Weeknd","Rihanna","Lady Gaga","AC/DC","Michael Jackson","The Rolling Stones"];
-                                const buttonContainer = document.querySelector('.button-container');
-
-                                buttonTitles.forEach(title => {
-                                const button = document.createElement('button');
-                                button.classList.add('search-toggle');
-                                button.textContent = title;
-                                button.setAttribute('onclick', `doSaavnSearch('${title}')`);
-                                buttonContainer.appendChild(button);
-                                });
                             </script>
                    
                         <p class="footer" align="center">
-                            This content is not affiliated with, endorsed, sponsored, or specifically approved by any third party music provider like Gaana, Saavn, Spotfy, and is not responsible for any copyright material.<br>
-                            We don't serve any music on our servers.<br><br>
+                            "此内容与闲_态度、Saavn、Spotify等第三方音乐提供商无关，并不代表其赞助、认可或特别批准，也不对任何版权材料负责。
+                            我们的服务器上没有提供任何音乐。".<br><br>
                             Originally by wiz64.<br>
-                            Re-Designed by gaganmalvi
+                            Re-Designed by 闲_态度
                         </p>
                         <div style="padding-bottom: 40px;">
 
@@ -105,10 +98,10 @@ Don't forget to star the repo
         </div>
     </div>
     <!-- floating downloader popup -->
-    <div class=”float-button” style="width:30px; height:30px; border-radius:50%; background-color:#fff; box-shadow: 0 0 10px #000; cursor:pointer; position:fixed;top:50px; right:20px; z-index:9999;">
+    <!-- <div class=”float-button” style="width:30px; height:30px; border-radius:50%; background-color:#fff; box-shadow: 0 0 10px #000; cursor:pointer; position:fixed;top:50px; right:20px; z-index:9999;">
     <!-- download icon -->
     <a href="javascript:void(0);" class="btn btn-primary" id="mpopupLink">
-    <img src="https://img.icons8.com/ios/50/000000/download.png">
+    <img src="https://img.icons8.com/ios/50/000000/download.png"> -->
     </a></div>
     <style>
                                 
