@@ -126,3 +126,21 @@ footer {
 .error {
  margin : 20px;
 }
+body {
+  position: relative; /* 添加相对定位，为伪元素提供参考 */
+  background-image: url("../img/background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* 背景颜色为黑色半透明 */
+  z-index: -1;
+}
