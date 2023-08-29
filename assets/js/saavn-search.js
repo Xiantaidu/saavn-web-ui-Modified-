@@ -34,7 +34,7 @@ results_container.innerHTML = `<span class="loader">Searching</span>`;
 try {
 var response = await fetch(searchUrl + query);
 } catch(error) {
-results_container.innerHTML = `<span class="error">Error: ${error} <br> Check if API is down </span>`;
+results_container.innerHTML = `<span class="error">Error: ${error} <br> Check if API is down(注:如果在大陆看到本提示，科学上网即可解决) </span>`;
 }
 var json = await response.json();
 /* If response code isn't 200, display error*/
@@ -79,8 +79,7 @@ if (bitrate_i == 4) {quality = 320} else {quality = 160;}
         track: track
     };
       results.push(`
-      <div class="text-left song-container" style="margin-bottom:20px;border-radius:10px;background-color:#1c1c1c;padding:10px;">
-      <div class="row" style="margin:auto;">
+      <div class="text-left song-container" style="margin-bottom:20px;border-radius:10px;background-color:rgba(28, 28, 28, 0.5);padding:10px;">      <div class="row" style="margin:auto;">
           <div class="col-auto" style="padding:0px;padding-right:0px;border-style:none;">
               <img id="${song_id}-i" class="img-fluid d-inline" style="width:115px;border-radius:5px;height:115px;padding-right:10px;" src="${song_image}" loading="lazy"/>
           </div>
@@ -89,8 +88,9 @@ if (bitrate_i == 4) {quality = 320} else {quality = 160;}
               <p id="${song_id}-n" class="fit-content" style="margin:0px;color:#fff;max-width:100%;">${song_name}</p>
               <p id="${song_id}-a" class="fit-content" style="margin:0px;color:#fff;max-width:100%;">${album_name}<br/></p>
               <p id="${song_id}-ar" class="fit-content" style="margin:0px;color:#fff;max-width:100%;">${song_artist}<br/></p>
-              <button class="btn btn-primary song-btn" type="button" style="margin:0px 2px;" onclick='PlayAudio("${download_url}","${song_id}")'>▶</button>
-              <button class="btn btn-primary song-btn" type="button" style="margin:0px 2px;" onclick='AddDownload("${song_id}")'>DL</button>
+              <button class="btn btn-primary song-btn" type="button" style="margin:0px 2px;background-color:rgba(61, 142, 255, 1); color:rgba(255, 255, 255, 1);" onclick='PlayAudio("${download_url}","${song_id}")'>▶️</button>
+              <button class="btn btn-primary song-btn" type="button" style="margin:0px 2px;background-color:rgba(61, 142, 255, 1); color:rgba(255, 255, 255, 1);" onclick='AddDownload("${download_url}", "${song_name}", "${song_artist}")'>📥</button>
+                                          
               <p class="float-right fit-content" style="margin:0px;color:#fff;padding-right:10px;padding-top:15px;">${play_time}<br/></p>
           </div>
       </div>
@@ -106,6 +106,16 @@ if (bitrate_i == 4) {quality = 320} else {quality = 160;}
 
 
 }
+function AddDownload(url, song_name, song_artist) {
+    fetch(url)
+      .then(response => response.blob())
+      .then(blob => {
+        var link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `${song_name} - ${song_artist}.mp3`;
+        link.click();
+      });
+  }
 function TextAbstract(text, length) {
     if (text == null) {
         return "";
