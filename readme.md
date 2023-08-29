@@ -1,18 +1,16 @@
 # Saavn
 
  <p>Playing high quality songs, over your web browser, ad-free experience, High-Quality Music upto 320kbps</p>
- 
----
-
+ <p>修改内容:1.改掉了不再可用的下载api，使用瞎写的退而求其次的办法下载mp3(能用就行了......)</p>
+ <p>         2.加了些透明效果和背景,使界面更美观(?)</p>
 ## Live Preview
 Preview is available at the links below : <br>
-[saavn-web-ui.vercel.app](https://saavn-web-ui.vercel.app/)<br>
-[saavn.codeforkers.tk](https://saavn.codeforkers.tk)
+[闲の小窝](https://relaxation.eu.org/music/)<br>
 
 ## Details
 > Status : `In Development`<br>
 Version : `v3.0` <br>
-Developers: `@wiz64`
+Developers: `@wiz64
 ## Features
 - ⭕ All basic features of a music player
 - :green_apple: Download MP3 Songs with metadata
